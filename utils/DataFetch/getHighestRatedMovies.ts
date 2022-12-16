@@ -1,8 +1,8 @@
 import "server-only";
 
-export default async function getMoviesInTheatres(page: string) {
+export default async function getHighestRatedMovies(page: string) {
   const resp = await fetch(
-    `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.API_KEY}&language=en-US&page=${page}`
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.API_KEY}&language=en-US&page=${page}`
   );
 
   return resp

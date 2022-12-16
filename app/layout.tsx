@@ -8,24 +8,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>
-        <nav className="p-8">
-          <Link href="/" className="p-8">
-            Home
+      <body className="w-100 h-100 text-center ">
+        <nav className="p-8 bg-blue-900">
+          <Link
+            href="/"
+            //className={`p-6 text-4xl text-white hover:text-yellow-400 ${
+            //  pathName === "/" && "text-yellow-400"
+            //}`}
+            className="p-6 text-4xl text-white hover:text-yellow-400 "
+          >
+            <b>Home</b>
           </Link>
-          <Link href="/in-theatres" className="p-8">
-            In Theatres
+          <Link
+            href="/highest-rated-movies/1"
+            //className={`p-6 text-4xl text-white hover:text-yellow-400 ${
+            //  pathName === "/highest-rated-movies" && "text-yellow-400"
+            //}`}
+            className="p-6 text-4xl text-white hover:text-yellow-400 "
+          >
+            <b>Highest Rated</b>
           </Link>
-          <Link href="/popular-movies" className="p-8">
-            Popular Movies
+          <Link
+            href="/in-theatres/1"
+            //className={`p-6 text-4xl text-white hover:text-yellow-400 ${
+            //  pathName === "/in-theatres" && "text-yellow-400"
+            //}`}
+            className="p-6 text-4xl text-white hover:text-yellow-400 "
+          >
+            <b>In Theatres</b>
           </Link>
-          <Link href="/highest-rated-movies" className="p-8">
-            Highest Rated Movies
+          <Link
+            href="/upcoming-movies/1"
+            //className={`p-6 text-4xl text-white hover:text-yellow-400 ${
+            //  pathName === "/upcoming-movies" && "text-yellow-400"
+            //}`}
+            className="p-6 text-4xl text-white hover:text-yellow-400 "
+          >
+            <b>Upcoming</b>
           </Link>
         </nav>
         {children}

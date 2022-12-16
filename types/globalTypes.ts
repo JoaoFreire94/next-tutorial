@@ -1,6 +1,7 @@
 export interface IPagination {
   numberOfPages: number;
   page: number;
+  actualRoute: string;
 }
 export interface IMovie {
   movie: IMovieFromApi;
